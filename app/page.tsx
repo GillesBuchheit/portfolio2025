@@ -2,6 +2,8 @@ import Apropos from "./components/landingPage/APropos";
 import Competences from "./components/landingPage/Competences";
 import HeroLanding from "./components/landingPage/HeroLanding";
 import Portfolio from "./components/landingPage/Portfolio";
+import Footer from "./components/landingPage/Footer";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#f5f5f0] relative overflow-hidden">
@@ -10,6 +12,7 @@ export default function Home() {
       <Apropos />
       <Competences />
       <Portfolio />
+      <Footer />
     </div>
   );
 }

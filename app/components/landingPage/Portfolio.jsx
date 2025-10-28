@@ -38,7 +38,10 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="relative min-h-screen pt-10 px-12 lg:px-20 pb-20">
+    <section
+      id="portfolio"
+      className="relative min-h-screen pt-10 px-12 lg:px-20 pb-20"
+    >
       <div className="flex relative">
         <div className="flex flex-col justify-center flex-1">
           <SectionTitle

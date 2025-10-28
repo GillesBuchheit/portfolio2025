@@ -20,7 +20,10 @@ export default function HeroLanding() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative h-screen flex flex-col  overflow-hidden bg-[#f5f5f0] justify-between ">
+    <section
+      id="accueil"
+      className="relative h-screen flex flex-col  overflow-hidden bg-[#f5f5f0] justify-between "
+    >
       <div className=" flex pt-16 px-12 lg:px-20 justify-between  ">
         <div className="flex flex-col justify-center ">
           <div className="flex items-center gap-2   ">

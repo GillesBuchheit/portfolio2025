@@ -82,7 +82,7 @@ export default function Competences() {
   ];
 
   return (
-    <section className="relative pt-10 px-12 lg:px-20 mb-10">
+    <section id="competences" className="relative pt-10 px-12 lg:px-20 mb-10">
       <div className="flex relative">
         <div className="flex flex-col justify-center  flex-1">
           <SectionTitle
