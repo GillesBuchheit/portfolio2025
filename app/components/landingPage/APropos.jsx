@@ -10,7 +10,7 @@ export default function APropos() {
     "UX/UI",
   ];
   return (
-    <section className="relative h-screen pt-10 px-12 lg:px-20">
+    <section className="relative pt-10 px-12 lg:px-20 mb-10">
       <div className="flex relative">
         <div className="flex flex-col justify-center  flex-1">
           <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
