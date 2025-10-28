@@ -77,6 +77,10 @@ export default function Competences() {
           name: "Jenkins",
           icon: "/logos/jenkins.svg",
         },
+        {
+          name: "Vercel",
+          icon: "/logos/vercel.svg",
+        },
       ],
     },
   ];
