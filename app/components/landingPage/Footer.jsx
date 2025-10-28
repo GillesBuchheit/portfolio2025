@@ -127,7 +127,7 @@ export default function Footer() {
               <span className="h-px w-8 bg-white/20"></span>
               <p className="text-white/40 text-xs">Tous droits réservés</p>
             </div>
-            <div className="flex gap-6 text-xs text-white/40">
+            {/* <div className="flex gap-6 text-xs text-white/40">
               <Link
                 href="/mentions-legales"
                 className="hover:text-[#e61f00] transition-colors"
@@ -141,7 +141,7 @@ export default function Footer() {
               >
                 Politique de confidentialité
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
