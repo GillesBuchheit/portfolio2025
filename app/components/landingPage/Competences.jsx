@@ -1,5 +1,5 @@
 import TechCard from "@/components/ui/TechCard";
-
+import SectionTitle from "@/components/ui/SectionTitle";
 import DownloadCV from "./DownloadCv";
 
 export default function Competences() {
@@ -85,15 +85,11 @@ export default function Competences() {
     <section className="relative pt-10 px-12 lg:px-20 mb-10">
       <div className="flex relative">
         <div className="flex flex-col justify-center  flex-1">
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            EXPERTISE TECHNIQUE
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#e61f00]">
-            Mes compétences
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            TECHNOLOGIES UTILISEES
-          </div>
+          <SectionTitle
+            preTitle="Expertise technique"
+            title="Mes compétences"
+            postTitle="Technologies & outils maîtrisés"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
             {technologies.map((technology) => (
               <TechCard

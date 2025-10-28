@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/ui/ProjectCard";
+import SectionTitle from "@/components/ui/SectionTitle";
 import DownloadCV from "./DownloadCv";
 
 export default function Portfolio() {
@@ -40,15 +41,11 @@ export default function Portfolio() {
     <section className="relative min-h-screen pt-10 px-12 lg:px-20 pb-20">
       <div className="flex relative">
         <div className="flex flex-col justify-center flex-1">
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            PORTFOLIO
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#e61f00]">
-            MES PROJETS
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            APPLICATIONS WEB
-          </div>
+          <SectionTitle
+            preTitle="Portfolio"
+            title="Mes projets"
+            postTitle="Réalisations & applications web"
+          />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {projects.map((project) => (

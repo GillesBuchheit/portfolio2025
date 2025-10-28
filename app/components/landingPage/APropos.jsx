@@ -1,5 +1,6 @@
 import Image from "next/image";
 import QualityTag from "@/components/ui/QualityTag";
+import SectionTitle from "@/components/ui/SectionTitle";
 
 export default function APropos() {
   const qualities = [
@@ -13,15 +14,11 @@ export default function APropos() {
     <section className="relative pt-10 px-12 lg:px-20 mb-10">
       <div className="flex relative">
         <div className="flex flex-col justify-center  flex-1">
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            A PROPOS
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#e61f00]">
-            CREATEUR
-          </div>
-          <div className="text-4xl lg:text-6xl font-erstoria text-[#0A0100]/60 mb-10">
-            D&apos;APPLICATIONS WEB
-          </div>
+          <SectionTitle
+            preTitle="A propos"
+            title="Créateur"
+            postTitle="D'applications web modernes"
+          />
           <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
             Je m'appelle Gilles Buchheit, j'ai 26 ans et je suis développeur web
             avec plus de 3 ans d'expérience. Passionné par le code et les
