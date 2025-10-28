@@ -1,10 +1,24 @@
-import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
+"use client";
 
+import { motion, AnimatePresence } from "motion/react";
+import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+const technologies = ["React", "Java", "Next.js", "TypeScript"];
+
 export default function HeroLanding() {
+  const [currentTechIndex, setCurrentTechIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTechIndex((prevIndex) => (prevIndex + 1) % technologies.length);
+    }, 2500); // Change every 2.5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
   return (
     <section className="relative h-screen flex flex-col  overflow-hidden bg-[#f5f5f0] justify-between ">
       <div className=" flex pt-16 px-12 lg:px-20 justify-between  ">
@@ -19,9 +33,22 @@ export default function HeroLanding() {
           <h2 className="text-5xl lg:text-7xl xl:text-8xl md:text-5xl sm:text-4xl  text-[#e61f00] font-erstoria">
             Développeur web
           </h2>
-          <span className="text-5xl lg:text-7xl xl:text-8xl md:text-6xl sm:text-5xl text-black font-erstoria">
-            Fullstack React | Java
-          </span>
+          <div className="text-5xl lg:text-7xl xl:text-8xl md:text-6xl sm:text-5xl text-black font-erstoria flex items-center h-[1.2em] gap-2">
+            <span>Fullstack&nbsp;</span>
+            <span>|</span>
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={currentTechIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="inline-block"
+              >
+                {technologies[currentTechIndex]}
+              </motion.span>
+            </AnimatePresence>
+          </div>
           <p className="mt-10 font-light text-[#0a0100b3] mb-15 text-sm lg:text-xl">
             Transformer les idées en expériences digitales puissantes qui
             engagent, inspirent et connectent.
@@ -60,7 +87,9 @@ export default function HeroLanding() {
         </div>
         <div className="flex flex-col justify-center gap-1 items-center">
           <span className="font-erstoria">3</span>
-          <span className="text-sm text-[#0A0100]/60">ANS D'EXPERIENCE</span>
+          <span className="text-sm text-[#0A0100]/60">
+            ANS D&apos;EXPERIENCE
+          </span>
         </div>
         <div className="flex flex-col gap-1 align-baseline">
           <Link href="#" className="font-erstoria">
