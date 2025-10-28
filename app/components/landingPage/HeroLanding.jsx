@@ -7,7 +7,7 @@ import Image from "next/image";
 export default function HeroLanding() {
   return (
     <section className="relative h-screen flex flex-col  overflow-hidden bg-[#f5f5f0] justify-between ">
-      <div className=" flex pt-16 px-12 justify-between  ">
+      <div className=" flex pt-16 px-12 lg:px-20 justify-between  ">
         <div className="flex flex-col justify-center ">
           <div className="flex items-center gap-2   ">
             <span className="h-px w-14 bg-[#0A0100]"></span>
@@ -16,10 +16,10 @@ export default function HeroLanding() {
             </h1>
             <span className="h-px w-14 bg-[#0A0100]"></span>
           </div>
-          <h2 className="text-5xl lg:text-8xl md:text-6xl sm:text-4xl  text-[#e61f00] font-erstoria">
+          <h2 className="text-5xl lg:text-7xl xl:text-8xl md:text-5xl sm:text-4xl  text-[#e61f00] font-erstoria">
             Développeur web
           </h2>
-          <span className="text-5xl lg:text-8xl md:text-6xl sm:text-4xl text-black font-erstoria">
+          <span className="text-5xl lg:text-7xl xl:text-8xl md:text-6xl sm:text-5xl text-black font-erstoria">
             Fullstack React | Java
           </span>
           <p className="mt-10 font-light text-[#0a0100b3] mb-15 text-sm lg:text-xl">

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HeroLanding from "./components/landingPage/HeroLanding";
 import Apropos from "./components/landingPage/APropos";
+import Competences from "./components/landingPage/Competences";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroLanding />
       <Apropos />
+      <Competences />
     </div>
   );
 }
