@@ -4,11 +4,10 @@ import QualityTag from "@/components/ui/QualityTag";
 export default function APropos() {
   const qualities = [
     "Performance",
+    "Robustesse",
     "Fiabilité",
     "Design",
     "UX/UI",
-    "SEO",
-    "Accessibilité",
   ];
   return (
     <section className="relative h-screen pt-10 px-12 lg:px-20">
