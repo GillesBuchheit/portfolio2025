@@ -49,7 +49,7 @@ function Menu({ isOpen, setIsOpen }) {
                 onClick={() => setIsOpen(false)}
                 key={item.href}
                 href={item.href}
-                className="text-black font-erstoria text-6xl hover:text-[#0A0100]/60 transition-all duration-300"
+                className="text-black font-erstoria text-4xl md:text-6xl hover:text-[#0A0100]/60 transition-all duration-300"
               >
                 {item.label}
               </Link>
