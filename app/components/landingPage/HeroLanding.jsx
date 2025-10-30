@@ -1,15 +1,24 @@
 "use client";
 
-import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
-import { ArrowDown, ArrowRight, MenuSquareIcon, XIcon } from "lucide-react";
-import Link from "next/link";
+import { ArrowDown, ArrowRight, MenuIcon, XIcon } from "lucide-react";
+import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const technologies = ["React", "Java", "Next.js", "TypeScript"];
 
 function Menu({ isOpen, setIsOpen }) {
+  const getFromUrl = () => {
+    const url = window.location.href;
+    const hash = url.split("#")[1];
+    return hash;
+  };
+  const [activeItem, setActiveItem] = useState(getFromUrl());
+
+  const isActive = (item) => activeItem === item.href.split("#")[1];
+
   const menuItems = [
     {
       label: "ACCUEIL",
@@ -17,19 +26,19 @@ function Menu({ isOpen, setIsOpen }) {
     },
     {
       label: "À PROPOS",
-      href: "/a-propos",
+      href: "/#apropos",
     },
     {
       label: "COMPÉTENCES",
-      href: "/competences",
+      href: "/#competences",
     },
     {
       label: "PORTFOLIO",
-      href: "/portfolio",
+      href: "/#portfolio",
     },
     {
       label: "CONTACT",
-      href: "/contact",
+      href: "/#contact",
     },
   ];
 
@@ -43,12 +52,13 @@ function Menu({ isOpen, setIsOpen }) {
           transition={{ duration: 0.5 }}
           className="fixed top-0 left-0 w-full h-full z-30 flex items-center justify-center  bg-[#f5f5f0]"
         >
-          <motion.div className="flex flex-col gap-3 ove">
+          <motion.div className="flex flex-col gap-5">
             {menuItems.map((item) => (
               <Link
+                onClick={() => setIsOpen(false)}
                 key={item.href}
                 href={item.href}
-                className="text-black font-erstoria text-6xl hover:text-[#0A0100]/60 transition-all duration-300"
+                className={`text-black font-erstoria text-6xl hover:text-[#0A0100]/60 transition-all duration-300 ${isActive(item) ? "text-[#e61f00]" : ""}`}
               >
                 {item.label}
               </Link>
@@ -78,13 +88,12 @@ export default function HeroLanding() {
     >
       <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className=" text-white flex items-center justify-between w-full fixed top-0 left-0 px-4 sm:px-6 md:px-12 lg:px-20 py-10 z-50">
-        <span className="bg-[#0A0100] p-5 w-15 h-15 flex items-center justify-center font-erstoria text-2xl sm:text-3xl md:text-3xl ">
+        <span className="bg-[#0A0100]  w-15 h-15 font-erstoria text-2xl sm:text-3xl md:text-3xl hidden md:flex items-center justify-center">
           GB.
         </span>
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          size="icon-lg"
-          className="hover:bg-transparent hover:text-[#0A0100]/60 hover:scale-110 transition-all duration-300"
+          className="p-5 w-15 h-15   hover:scale-110 transition-all duration-300"
         >
           <AnimatePresence mode="wait" initial={false}>
             {isOpen ? (
@@ -105,7 +114,7 @@ export default function HeroLanding() {
                 exit={{ rotate: -90, opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <MenuSquareIcon size={24} />
+                <MenuIcon size={32} />
               </motion.div>
             )}
           </AnimatePresence>
