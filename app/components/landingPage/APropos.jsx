@@ -2,6 +2,10 @@ import Image from "next/image";
 import QualityTag from "@/components/ui/QualityTag";
 import SectionTitle from "@/components/ui/SectionTitle";
 
+const firstPicSizes = "w-32 h-32 md:w-40 md:h-40 lg:w-72 lg:h-96";
+const secondPicSizes = "w-40 h-40 md:w-48 md:h-48 lg:w-72 lg:h-96";
+const thirdPicSizes = "w-28 h-36 md:w-32 md:h-40 lg:w-55 lg:h-80";
+
 export default function APropos() {
   const qualities = [
     "Performance",
@@ -45,7 +49,7 @@ export default function APropos() {
         </div>
         <div className="flex-1 relative hidden md:block">
           <Image
-            className="absolute top-0 right-[10%] md:right-[15%] lg:right-[20%] z-10 w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-72 object-cover"
+            className={`absolute top-0 right-[10%] md:right-[15%] lg:right-[20%] z-10 w-32 h-32 ${firstPicSizes} object-cover`}
             src="/abstract2.jpg"
             alt="Gilles Buchheit"
             width={200}
@@ -53,7 +57,7 @@ export default function APropos() {
           />
 
           <Image
-            className="absolute top-[30%] md:top-[35%] lg:top-[40%] right-0 md:right-[5%] z-20 w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-72 object-cover"
+            className={`absolute top-[30%] md:top-[35%] lg:top-[40%] right-0 md:right-[5%] z-20  ${secondPicSizes} object-cover`}
             src="/sphere.jpg"
             alt="Gilles Buchheit"
             width={640}
@@ -61,7 +65,7 @@ export default function APropos() {
           />
 
           <Image
-            className="absolute top-[15%] md:top-[18%] lg:top-[20%] right-[25%] md:right-[30%] lg:right-[35%] z-30 w-28 h-36 md:w-32 md:h-40 lg:w-36 lg:h-48 object-cover"
+            className={`absolute top-[15%] md:top-[18%] lg:top-[60%] right-[25%] md:right-[30%] lg:right-[35%] z-30 ${thirdPicSizes} object-cover`}
             src="/red_texture.jpg"
             alt="Gilles Buchheit"
             width={150}
