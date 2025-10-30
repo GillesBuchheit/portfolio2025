@@ -3,13 +3,36 @@
 import { motion, AnimatePresence } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { ArrowDown, ArrowRight, MenuSquareIcon } from "lucide-react";
+import { ArrowDown, ArrowRight, MenuSquareIcon, XIcon } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const technologies = ["React", "Java", "Next.js", "TypeScript"];
 
 function Menu({ isOpen, setIsOpen }) {
+  const menuItems = [
+    {
+      label: "ACCUEIL",
+      href: "/",
+    },
+    {
+      label: "À PROPOS",
+      href: "/a-propos",
+    },
+    {
+      label: "COMPÉTENCES",
+      href: "/competences",
+    },
+    {
+      label: "PORTFOLIO",
+      href: "/portfolio",
+    },
+    {
+      label: "CONTACT",
+      href: "/contact",
+    },
+  ];
+
   return (
     <AnimatePresence mode="wait">
       {isOpen && (
@@ -20,31 +43,16 @@ function Menu({ isOpen, setIsOpen }) {
           transition={{ duration: 0.5 }}
           className="fixed top-0 left-0 w-full h-full z-30 flex items-center justify-center  bg-[#f5f5f0]"
         >
-          <motion.div className="flex flex-col gap-2 ove">
-            <Button
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
-            >
-              <MenuSquareIcon className="w-6 h-6" />
-            </Button>
-            <Button
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
-            >
-              <MenuSquareIcon className="w-6 h-6" />
-            </Button>
-            <Button
-              initial={{ opacity: 0, y: -100 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
-            >
-              <MenuSquareIcon className="w-6 h-6" />
-            </Button>
+          <motion.div className="flex flex-col gap-3 ove">
+            {menuItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-black font-erstoria text-6xl hover:text-[#0A0100]/60 transition-all duration-300"
+              >
+                {item.label}
+              </Link>
+            ))}
           </motion.div>
         </motion.div>
       )}
@@ -76,9 +84,31 @@ export default function HeroLanding() {
         <Button
           onClick={() => setIsOpen(!isOpen)}
           size="icon-lg"
-          // variant="secondary"
+          className="hover:bg-transparent hover:text-[#0A0100]/60 hover:scale-110 transition-all duration-300"
         >
-          <MenuSquareIcon size={24} />
+          <AnimatePresence mode="wait" initial={false}>
+            {isOpen ? (
+              <motion.div
+                key="xicon"
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <XIcon size={24} />
+              </motion.div>
+            ) : (
+              <motion.div
+                key="menuicon"
+                initial={{ rotate: 90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: -90, opacity: 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <MenuSquareIcon size={24} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </Button>
       </div>
       <div className="flex flex-1 pt-8 sm:pt-12 md:pt-16  items-center lg:justify-between justify-center gap-8">
