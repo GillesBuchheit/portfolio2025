@@ -10,13 +10,6 @@ import { useEffect, useState } from "react";
 const technologies = ["React", "Java", "Next.js", "TypeScript"];
 
 function Menu({ isOpen, setIsOpen }) {
-  const getFromUrl = () => {
-    const url = window.location.href;
-    const hash = url.split("#")[1];
-    return hash;
-  };
-  const [activeItem, setActiveItem] = useState(getFromUrl());
-
   const isActive = (item) => activeItem === item.href.split("#")[1];
 
   const menuItems = [
