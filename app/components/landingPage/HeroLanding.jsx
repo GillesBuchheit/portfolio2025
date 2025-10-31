@@ -1,69 +1,17 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { ArrowDown, ArrowRight, MenuIcon, XIcon } from "lucide-react";
+import { ArrowDown, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Navigation from "@/components/Navigation";
 
 const technologies = ["React", "Java", "Next.js", "TypeScript"];
 
-function Menu({ isOpen, setIsOpen }) {
-  const menuItems = [
-    {
-      label: "ACCUEIL",
-      href: "/",
-    },
-    {
-      label: "À PROPOS",
-      href: "/#apropos",
-    },
-    {
-      label: "COMPÉTENCES",
-      href: "/#competences",
-    },
-    {
-      label: "PORTFOLIO",
-      href: "/#portfolio",
-    },
-    {
-      label: "CONTACT",
-      href: "/#contact",
-    },
-  ];
-
-  return (
-    <AnimatePresence mode="wait">
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -100 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.5 }}
-          className="fixed top-0 left-0 w-full h-full z-30 flex items-center justify-center  bg-[#f5f5f0]"
-        >
-          <motion.div className="flex flex-col gap-5">
-            {menuItems.map((item) => (
-              <Link
-                onClick={() => setIsOpen(false)}
-                key={item.href}
-                href={item.href}
-                className="text-black font-erstoria text-4xl md:text-6xl hover:text-[#0A0100]/60 transition-all duration-300"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-}
-
 export default function HeroLanding() {
   const [currentTechIndex, setCurrentTechIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -77,40 +25,7 @@ export default function HeroLanding() {
       id="accueil"
       className="relative min-h-screen h-screen flex flex-col overflow-hidden bg-[#f5f5f0] px-4 sm:px-6 md:px-12 lg:px-20"
     >
-      <Menu isOpen={isOpen} setIsOpen={setIsOpen} />
-      <div className=" text-white flex items-center justify-between w-full fixed top-0 left-0 px-4 sm:px-6 md:px-12 lg:px-20 py-10 z-50">
-        <span className="bg-[#0A0100]  w-15 h-15 font-erstoria text-2xl sm:text-3xl md:text-3xl hidden md:flex items-center justify-center">
-          GB.
-        </span>
-        <Button
-          onClick={() => setIsOpen(!isOpen)}
-          className="p-5 w-15 h-15   hover:scale-110 transition-all duration-300"
-        >
-          <AnimatePresence mode="wait" initial={false}>
-            {isOpen ? (
-              <motion.div
-                key="xicon"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <XIcon size={24} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menuicon"
-                initial={{ rotate: 90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: -90, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                <MenuIcon size={32} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </Button>
-      </div>
+      <Navigation />
       <div className="flex flex-1 pt-8 sm:pt-12 md:pt-16  items-center lg:justify-between justify-center gap-8">
         <div className="flex flex-col justify-center w-full lg:w-3/5 max-w-full items-center lg:items-start">
           <div className="flex items-center gap-2">
@@ -151,13 +66,15 @@ export default function HeroLanding() {
               Voir mes projets
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button
-              size="xxl"
-              variant="outline"
-              className="hover:bg-[#FEF2F2] font-erstoria text-sm sm:text-base w-full sm:w-auto"
-            >
-              Me contacter
-            </Button>
+            <Link href="/contact">
+              <Button
+                size="xxl"
+                variant="outline"
+                className="hover:bg-[#FEF2F2] font-erstoria text-sm sm:text-base w-full sm:w-auto"
+              >
+                Me contacter
+              </Button>
+            </Link>
           </div>
         </div>
         <Image

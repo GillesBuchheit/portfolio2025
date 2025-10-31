@@ -89,6 +89,14 @@ export default function Footer() {
                   Portfolio
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-white/60 hover:text-[#e61f00] transition-colors duration-300 text-sm"
+                >
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 
