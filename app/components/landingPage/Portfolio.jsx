@@ -62,10 +62,6 @@ export default function Portfolio() {
               />
             ))}
           </div>
-
-          <div className="flex justify-center mt-10">
-            <DownloadCV />
-          </div>
         </div>
       </div>
     </section>

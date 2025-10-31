@@ -62,9 +62,12 @@ export default function HeroLanding() {
             <Button
               size="xxl"
               className="hover:bg-[#B91C1C] text-white group font-erstoria text-sm sm:text-base w-full sm:w-auto"
+              asChild
             >
-              Voir mes projets
-              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+              <Link href="/#portfolio">
+                Voir mes projets
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
             </Button>
             <Link href="/contact">
               <Button
