@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
+import { personalInfo, contactDetails, socialLinks } from "@/lib/contactInfo";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,39 +17,29 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <span className="h-px w-12 bg-[#e61f00]"></span>
               <h3 className="text-xl font-erstoria tracking-[0.2em] text-white">
-                GILLES BUCHHEIT
+                {personalInfo.name}
               </h3>
             </div>
             <p className="text-white/60 mb-6 leading-relaxed">
-              Développeur web Fullstack passionné par la création
-              d&apos;expériences digitales innovantes et performantes.
+              {personalInfo.bio}
             </p>
             <div className="flex gap-3">
-              <Link
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="w-10 h-10 border border-white/20 rounded-sm flex items-center justify-center hover:border-[#e61f00] hover:bg-[#e61f00]/10 transition-all duration-300">
-                  <Github className="w-5 h-5 text-white/60 group-hover:text-[#e61f00] transition-colors" />
-                </div>
-              </Link>
-              <Link
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <div className="w-10 h-10 border border-white/20 rounded-sm flex items-center justify-center hover:border-[#e61f00] hover:bg-[#e61f00]/10 transition-all duration-300">
-                  <Linkedin className="w-5 h-5 text-white/60 group-hover:text-[#e61f00] transition-colors" />
-                </div>
-              </Link>
-              <Link href="mailto:contact@gillesbuchheit.dev" className="group">
-                <div className="w-10 h-10 border border-white/20 rounded-sm flex items-center justify-center hover:border-[#e61f00] hover:bg-[#e61f00]/10 transition-all duration-300">
-                  <Mail className="w-5 h-5 text-white/60 group-hover:text-[#e61f00] transition-colors" />
-                </div>
-              </Link>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <Link
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <div className="w-10 h-10 border border-white/20 rounded-sm flex items-center justify-center hover:border-[#e61f00] hover:bg-[#e61f00]/10 transition-all duration-300">
+                      <Icon className="w-5 h-5 text-white/60 group-hover:text-[#e61f00] transition-colors" />
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -107,20 +98,20 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-[#e61f00]" />
-                <span>METZ | NANCY | LUXEMBOURG</span>
+                <span>{personalInfo.location}</span>
               </li>
               <li className="flex items-start gap-2 text-white/60 text-sm">
                 <Mail className="w-4 h-4 mt-0.5 text-[#e61f00]" />
                 <Link
-                  href="mailto:contact@gillesbuchheit.dev"
+                  href={`mailto:${contactDetails.email}`}
                   className="hover:text-[#e61f00] transition-colors"
                 >
-                  contact@gillesbuchheit.dev
+                  {contactDetails.email}
                 </Link>
               </li>
               <li className="flex items-start gap-2 text-white/60 text-sm">
                 <Phone className="w-4 h-4 mt-0.5 text-[#e61f00]" />
-                <span>Sur demande</span>
+                <span>{contactDetails.phone}</span>
               </li>
             </ul>
           </div>
@@ -130,26 +121,11 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-4">
               <p className="text-white/40 text-xs font-erstoria tracking-wider">
-                © {currentYear} GILLES BUCHHEIT
+                © {currentYear} {personalInfo.name}
               </p>
               <span className="h-px w-8 bg-white/20"></span>
               <p className="text-white/40 text-xs">Tous droits réservés</p>
             </div>
-            {/* <div className="flex gap-6 text-xs text-white/40">
-              <Link
-                href="/mentions-legales"
-                className="hover:text-[#e61f00] transition-colors"
-              >
-                Mentions légales
-              </Link>
-              <span className="text-white/20">|</span>
-              <Link
-                href="/politique-confidentialite"
-                className="hover:text-[#e61f00] transition-colors"
-              >
-                Politique de confidentialité
-              </Link>
-            </div> */}
           </div>
         </div>
       </div>

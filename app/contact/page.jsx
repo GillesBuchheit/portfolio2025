@@ -1,59 +1,20 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Mail,
-  Phone,
-  Github,
-  Linkedin,
-  MapPin,
-  ArrowRight,
-} from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
 import Footer from "../components/landingPage/Footer";
 import Navigation from "@/components/Navigation";
+import { contactInfo, personalInfo, contactDetails } from "@/lib/contactInfo";
 
 export default function ContactPage() {
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "contact@gillesbuchheit.dev",
-      href: "mailto:contact@gillesbuchheit.dev",
-      description: "Envoyez-moi un email pour discuter de vos projets",
-    },
-    {
-      icon: Phone,
-      label: "Téléphone",
-      value: "Sur demande",
-      href: null,
-      description: "Disponible après premier contact",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "github.com/gillesbuchheit",
-      href: "https://github.com",
-      description: "Découvrez mes projets open source",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "linkedin.com/in/gillesbuchheit",
-      href: "https://linkedin.com",
-      description: "Connectons-nous professionnellement",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-[#f5f5f0] relative overflow-hidden">
       <Navigation />
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex flex-col px-4 sm:px-6 md:px-12 lg:px-20 pt-32 pb-20">
         <div className="max-w-7xl mx-auto w-full">
-          {/* Title Section */}
           <div className="mb-16">
             <div className="flex items-center gap-2 mb-6">
               <span className="h-px w-8 sm:w-14 bg-[#0A0100]"></span>
@@ -70,7 +31,6 @@ export default function ContactPage() {
             </p>
           </div>
 
-          {/* Location Info */}
           <div className="flex items-center gap-3 mb-16 bg-white/50 p-6 rounded-lg border border-[#0A0100]/10 max-w-md">
             <MapPin className="w-6 h-6 text-[#e61f00]" />
             <div>
@@ -78,12 +38,11 @@ export default function ContactPage() {
                 Localisation
               </p>
               <p className="font-light text-[#0A0100] text-lg">
-                METZ | NANCY | LUXEMBOURG
+                {personalInfo.location}
               </p>
             </div>
           </div>
 
-          {/* Contact Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
             {contactInfo.map((contact, index) => {
               const Icon = contact.icon;
@@ -132,14 +91,12 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  {/* Decorative element */}
                   <div className="absolute top-0 right-0 w-24 h-24 bg-[#e61f00]/5 rounded-full blur-2xl -z-10 group-hover:bg-[#e61f00]/10 transition-colors duration-300"></div>
                 </motion.div>
               );
             })}
           </div>
 
-          {/* Additional Info Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -155,7 +112,7 @@ export default function ContactPage() {
                 opportunités de collaboration. Contactez-moi pour discuter de
                 votre projet.
               </p>
-              <Link href="mailto:contact@gillesbuchheit.dev">
+              <Link href={`mailto:${contactDetails.email}`}>
                 <Button
                   size="xxl"
                   className="bg-[#e61f00] hover:bg-[#B91C1C] text-white group font-erstoria"
@@ -166,14 +123,12 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            {/* Decorative elements */}
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#e61f00]/10 rounded-full blur-3xl"></div>
             <div className="absolute top-0 left-0 w-48 h-48 bg-[#e61f00]/5 rounded-full blur-3xl"></div>
           </motion.div>
         </div>
       </section>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
