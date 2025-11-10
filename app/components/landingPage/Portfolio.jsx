@@ -5,36 +5,35 @@ import DownloadCV from "./DownloadCv";
 export default function Portfolio() {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description:
-        "Plateforme de commerce électronique moderne avec gestion de panier, paiement sécurisé et interface administrateur complète.",
-      image: "/abstract2.jpg",
-      tags: ["React", "Next.js", "TypeScript", "Supabase"],
-      link: "https://example.com",
-    },
-    {
-      title: "Task Management App",
-      description:
-        "Application de gestion de tâches avec collaboration en temps réel, notifications et tableau de bord analytique.",
-      image: "/building.jpg",
-      tags: ["React", "Redux", "Spring Boot", "PostgreSQL"],
-      link: "https://example.com",
-    },
-    {
-      title: "Portfolio Dashboard",
-      description:
-        "Tableau de bord interactif pour visualiser et gérer un portfolio d'investissements avec graphiques en temps réel.",
+      title: "Portfolio personnel",
+      description: "Site web personnel avec portfolio de projets et contact.",
       image: "/sphere.jpg",
-      tags: ["Next.js", "Tailwind CSS", "Python", "SQL Server"],
-      link: "https://example.com",
+      tags: ["Next.js", "Tailwind CSS"],
+      link: "https://gillesbuchheit.dev",
     },
     {
-      title: "Social Media Platform",
+      title: "CourtClub",
       description:
-        "Réseau social avec système de posts, commentaires, likes et messagerie instantanée entre utilisateurs.",
-      image: "/red_texture.jpg",
-      tags: ["React", "TypeScript", "Java", "Jenkins"],
+        "Création de ligues de tennis avec gestion des joueurs, des matchs et des résultats.",
+      image: "/building.jpg",
+      tags: ["React", "Redux", "Python", "fastAPI", "PostgreSQL"],
+      link: "https://superleague-frontend.onrender.com/",
     },
+    {
+      title: "Site web Dr. Blanke Marine",
+      description:
+        "Site web de la clinique dentaire Dr. Blanke Marine avec portfolio de services, horaires et contact.",
+      image: "/site_web_dr_blanke.png",
+      tags: ["Bootstrap", "PHP", "HTML", "CSS"],
+      link: "https://dr-blanke-marine.chirurgiens-dentistes.fr/",
+    },
+    // {
+    //   title: "Social Media Platform",
+    //   description:
+    //     "Réseau social avec système de posts, commentaires, likes et messagerie instantanée entre utilisateurs.",
+    //   image: "/red_texture.jpg",
+    //   tags: ["React", "TypeScript", "Java", "Jenkins"],
+    // },
   ];
 
   return (

@@ -23,7 +23,7 @@ export default function ContactPage() {
               </h1>
               <span className="h-px w-8 sm:w-14 bg-[#0A0100]"></span>
             </div>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-[#e61f00] font-erstoria mb-4">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-brand font-erstoria mb-4">
               Contact
             </h2>
             <p className="text-lg sm:text-xl md:text-2xl font-erstoria text-[#0A0100]/60 tracking-wide mt-6">
@@ -32,7 +32,7 @@ export default function ContactPage() {
           </div>
 
           <div className="flex items-center gap-3 mb-16 bg-white/50 p-6 rounded-lg border border-[#0A0100]/10 max-w-md">
-            <MapPin className="w-6 h-6 text-[#e61f00]" />
+            <MapPin className="w-6 h-6 text-brand" />
             <div>
               <p className="font-erstoria text-sm text-[#0A0100]/60 mb-1">
                 Localisation
@@ -52,11 +52,11 @@ export default function ContactPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group relative bg-white/70 backdrop-blur-sm p-8 rounded-lg border border-[#0A0100]/10 hover:border-[#e61f00]/50 transition-all duration-300 hover:shadow-lg"
+                  className="group relative bg-white/70 backdrop-blur-sm p-8 rounded-lg border border-[#0A0100]/10 hover:border-brand/50 transition-all duration-300 hover:shadow-lg"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 bg-[#e61f00]/10 rounded-lg flex items-center justify-center group-hover:bg-[#e61f00] transition-colors duration-300 shrink-0">
-                      <Icon className="w-7 h-7 text-[#e61f00] group-hover:text-white transition-colors duration-300" />
+                    <div className="w-14 h-14 bg-brand/10 rounded-lg flex items-center justify-center group-hover:bg-brand transition-colors duration-300 shrink-0">
+                      <Icon className="w-7 h-7 text-brand group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className="font-erstoria text-xl text-[#0A0100] mb-2">
@@ -78,7 +78,7 @@ export default function ContactPage() {
                               ? "noopener noreferrer"
                               : undefined
                           }
-                          className="text-[#e61f00] font-medium text-sm hover:underline inline-flex items-center gap-2 group/link"
+                          className="text-brand font-medium text-sm hover:underline inline-flex items-center gap-2 group/link"
                         >
                           {contact.value}
                           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
@@ -91,7 +91,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-[#e61f00]/5 rounded-full blur-2xl -z-10 group-hover:bg-[#e61f00]/10 transition-colors duration-300"></div>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-full blur-2xl -z-10 group-hover:bg-brand/10 transition-colors duration-300"></div>
                 </motion.div>
               );
             })}
@@ -115,7 +115,7 @@ export default function ContactPage() {
               <Link href={`mailto:${contactDetails.email}`}>
                 <Button
                   size="xxl"
-                  className="bg-[#e61f00] hover:bg-[#B91C1C] text-white group font-erstoria"
+                  className="bg-brand hover:bg-[#B91C1C] text-white group font-erstoria"
                 >
                   Envoyez-moi un message
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -123,8 +123,8 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            <div className="absolute bottom-0 right-0 w-64 h-64 bg-[#e61f00]/10 rounded-full blur-3xl"></div>
-            <div className="absolute top-0 left-0 w-48 h-48 bg-[#e61f00]/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-64 h-64 bg-brand/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-48 h-48 bg-brand/5 rounded-full blur-3xl"></div>
           </motion.div>
         </div>
       </section>

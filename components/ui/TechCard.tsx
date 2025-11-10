@@ -28,10 +28,10 @@ export default function TechCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`group relative flex flex-col backdrop-blur-sm bg-white/50 border shadow-sm hover:shadow-md transition-all duration-300 ${isOpen ? "border-[#e61f00]/50 shadow-[#e61f00]/10" : "border-[#0A0100]/10"} p-6`}
+      className={`group relative flex flex-col backdrop-blur-sm bg-white/50 border shadow-sm hover:shadow-md transition-all duration-300 ${isOpen ? "border-brand/50 shadow-brand/10" : "border-[#0A0100]/10"} p-6`}
     >
       <div
-        className={`absolute inset-0 blur-xl transition-all duration-300 ${isOpen ? "bg-[#e61f00]/5" : "bg-transparent"}`}
+        className={`absolute inset-0 blur-xl transition-all duration-300 ${isOpen ? "bg-brand/5" : "bg-transparent"}`}
       />
 
       <div className="relative flex items-center justify-between gap-3">
@@ -45,7 +45,7 @@ export default function TechCard({
         </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`shrink-0 p-2 transition-all duration-300 ${isOpen ? "bg-[#e61f00]/10 hover:bg-[#e61f00]/20" : "hover:bg-[#0A0100]/5"}`}
+          className={`shrink-0 p-2 transition-all duration-300 ${isOpen ? "bg-brand/10 hover:bg-brand/20" : "hover:bg-[#0A0100]/5"}`}
           aria-label={isOpen ? "Fermer les détails" : "Voir les détails"}
         >
           <motion.div
@@ -54,7 +54,7 @@ export default function TechCard({
           >
             <ChevronDown
               size={24}
-              className={`transition-colors duration-300 ${isOpen ? "text-[#e61f00]" : "text-[#0A0100]/60"}`}
+              className={`transition-colors duration-300 ${isOpen ? "text-brand" : "text-[#0A0100]/60"}`}
             />
           </motion.div>
         </button>
@@ -69,7 +69,7 @@ export default function TechCard({
             transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="relative overflow-hidden"
           >
-            <div className="w-full h-px bg-linear-to-r from-transparent via-[#e61f00]/20 to-transparent mb-5" />
+            <div className="w-full h-px bg-linear-to-r from-transparent via-brand/20 to-transparent mb-5" />
 
             <div className="grid grid-cols-2 gap-4">
               {technos.map((techno, index) => (

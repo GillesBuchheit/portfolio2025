@@ -35,7 +35,7 @@ export default function HeroLanding() {
             </h1>
             <span className="h-px w-8 sm:w-14 bg-[#0A0100]"></span>
           </div>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-8xl text-[#e61f00] font-erstoria mt-2 text-center lg:text-left">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-8xl text-brand font-erstoria mt-2 text-center lg:text-left">
             Développeur web
           </h2>
           <div className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-8xl text-black font-erstoria flex flex-wrap items-center justify-center lg:justify-start min-h-[1.2em] gap-2">

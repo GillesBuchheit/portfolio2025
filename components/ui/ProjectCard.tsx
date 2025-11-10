@@ -26,7 +26,7 @@ export default function ProjectCard({
       transition={{ duration: 0.6 }}
       className="group relative flex flex-col backdrop-blur-sm bg-white/50 border border-[#0A0100]/10 shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-linear-to-b from-transparent to-[#e61f00]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-brand/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="relative w-full h-64 overflow-hidden">
         <Image
@@ -39,7 +39,7 @@ export default function ProjectCard({
       </div>
 
       <div className="relative p-6 flex flex-col flex-1">
-        <h3 className="text-2xl font-erstoria text-[#0A0100]/90 mb-3 group-hover:text-[#e61f00] transition-colors duration-300">
+        <h3 className="text-2xl font-erstoria text-[#0A0100]/90 mb-3 group-hover:text-brand transition-colors duration-300">
           {title}
         </h3>
 
@@ -55,7 +55,7 @@ export default function ProjectCard({
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.3 }}
-              className="px-3 py-1 text-xs font-medium bg-[#0A0100]/5 border border-[#0A0100]/10 text-[#0A0100]/70 hover:bg-[#e61f00]/10 hover:border-[#e61f00]/30 hover:text-[#e61f00] transition-all duration-300"
+              className="px-3 py-1 text-xs font-medium bg-[#0A0100]/5 border border-[#0A0100]/10 text-[#0A0100]/70 hover:bg-brand/10 hover:border-brand/30 hover:text-brand transition-all duration-300"
             >
               {tag}
             </motion.span>
@@ -68,7 +68,7 @@ export default function ProjectCard({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-medium text-[#0A0100]/60 hover:text-[#e61f00] transition-colors duration-300"
+              className="inline-flex items-center text-sm font-medium text-[#0A0100]/60 hover:text-brand transition-colors duration-300"
             >
               Voir le projet
               <svg

@@ -12,7 +12,7 @@ export default function SectionTitle({
   return (
     <div className="mb-16">
       <div className="flex items-center gap-4 mb-6">
-        <div className="h-px w-12 bg-[#e61f00]"></div>
+        <div className="h-px w-12 bg-brand"></div>
         <span className="text-xs lg:text-sm font-erstoria tracking-[0.3em] text-[#0A0100]/40 uppercase">
           {preTitle}
         </span>
@@ -20,10 +20,10 @@ export default function SectionTitle({
       </div>
 
       <div className="relative">
-        <h2 className="text-5xl lg:text-7xl font-erstoria text-[#e61f00] mb-3 relative inline-block">
+        <h2 className="text-5xl lg:text-7xl font-erstoria text-brand mb-3 relative inline-block">
           {title}
-          <div className="absolute -bottom-2 left-0 w-24 h-[2px] bg-[#e61f00]"></div>
-          <div className="absolute -bottom-2 left-28 w-12 h-px bg-[#e61f00]/40"></div>
+          <div className="absolute -bottom-2 left-0 w-24 h-[2px] bg-brand"></div>
+          <div className="absolute -bottom-2 left-28 w-12 h-px bg-brand/40"></div>
         </h2>
       </div>
 
