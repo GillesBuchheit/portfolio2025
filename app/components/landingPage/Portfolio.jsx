@@ -6,16 +6,21 @@ export default function Portfolio() {
   const projects = [
     {
       title: "Portfolio personnel",
-      description: "Site web personnel avec portfolio de projets et contact.",
-      image: "/sphere.jpg",
-      tags: ["Next.js", "Tailwind CSS"],
+      description:
+        "Mon portfolio personnel avec tous mes projets et mes compétences.",
+      image: "/portfolio.png",
+      image_width: 1901,
+      image_height: 950,
+      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
       link: "https://gillesbuchheit.dev",
     },
     {
       title: "CourtClub",
       description:
         "Création de ligues de tennis avec gestion des joueurs, des matchs et des résultats.",
-      image: "/building.jpg",
+      image: "/court_club.png",
+      image_width: 1919,
+      image_height: 744,
       tags: ["React", "Redux", "Python", "fastAPI", "PostgreSQL"],
       link: "https://superleague-frontend.onrender.com/",
     },
@@ -24,16 +29,11 @@ export default function Portfolio() {
       description:
         "Site web de la clinique dentaire Dr. Blanke Marine avec portfolio de services, horaires et contact.",
       image: "/site_web_dr_blanke.png",
+      image_width: 1919,
+      image_height: 949,
       tags: ["Bootstrap", "PHP", "HTML", "CSS"],
       link: "https://dr-blanke-marine.chirurgiens-dentistes.fr/",
     },
-    // {
-    //   title: "Social Media Platform",
-    //   description:
-    //     "Réseau social avec système de posts, commentaires, likes et messagerie instantanée entre utilisateurs.",
-    //   image: "/red_texture.jpg",
-    //   tags: ["React", "TypeScript", "Java", "Jenkins"],
-    // },
   ];
 
   return (

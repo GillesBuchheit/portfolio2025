@@ -7,6 +7,8 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
+  image_width: number;
+  image_height: number;
   tags: string[];
   link?: string;
 }
@@ -15,6 +17,8 @@ export default function ProjectCard({
   title,
   description,
   image,
+  image_width,
+  image_height,
   tags,
   link,
 }: ProjectCardProps) {
@@ -32,6 +36,8 @@ export default function ProjectCard({
         <Image
           src={image}
           alt={title}
+          width={image_width}
+          height={image_height}
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-110"
         />
