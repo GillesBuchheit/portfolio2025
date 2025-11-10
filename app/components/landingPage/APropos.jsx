@@ -24,27 +24,27 @@ export default function APropos() {
             postTitle="D'applications web modernes"
           />
           <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
-            Je m'appelle Gilles Buchheit, j'ai 26 ans et je suis développeur web
-            avec plus de 3 ans d'expérience. Passionné par le code et les
-            technologies modernes, je conçois et développe des solutions web
-            complètes, alliant performance, fiabilité et design soigné.
+            Je m’appelle Gilles Buchheit, je suis développeur web avec plus de 3
+            ans d’expérience.
           </p>
           <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
-            Mon travail se situe à la croisée du développement backend et de la
-            création d'expériences utilisateur intuitives. J'accorde une grande
-            importance à la qualité du code, à la structure des architectures
-            logicielles et à la clarté des interfaces qui en découlent.
+            J’aide les particuliers et les entreprises à concevoir des solutions
+            web complètes, alliant performance, fiabilité et design soigné.
           </p>
           <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
-            Ma philosophie : créer des applications qui ne se contentent pas de
-            fonctionner, mais qui offrent une véritable valeur ajoutée grâce à
-            un équilibre entre technologie, efficacité et expérience
-            utilisateur.
+            Mon travail couvre tout le processus de créationd’une application,
+            de la conception jusqu’au déploiement. Je m’occupe du design, du
+            développement d’un backend performant et de la mise en place
+            d’interfaces modernes et intuitives.
           </p>
           <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
-            Chaque projet est pour moi une opportunité d'innover, d'apprendre et
-            de repousser mes limites, tout en maintenant un haut niveau
-            d'exigence technique et créative.
+            J'accorde une grande importance à la qualité du code, à la structure
+            des architectures logicielles et à la clarté des interfaces qui en
+            découlent.
+          </p>
+          <p className="font-light text-sm lg:text-xl text-[#0A0100]/60 mb-5">
+            Chaque projet est pour moi une opportunité d’apprendre, de découvrir
+            de nouvelles choses et de se confronter à de nouveaux challenges.
           </p>
         </div>
         <div className="flex-1 relative hidden md:block">
