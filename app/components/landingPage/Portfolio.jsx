@@ -15,7 +15,7 @@ export default function Portfolio() {
       link: "https://gillesbuchheit.dev",
     },
     {
-      title: "CourtClub",
+      title: "CourtClub (en cours)",
       description:
         "Création de ligues de tennis avec gestion des joueurs, des matchs et des résultats.",
       image: "/court_club.png",
