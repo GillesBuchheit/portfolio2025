@@ -19,10 +19,36 @@ export const metadata: Metadata = {
   description: "Gilles Buchheit | Développeur web Fullstack React | Java",
   keywords: ["Gilles Buchheit", "Développeur web", "Fullstack React", "Java"],
   authors: [{ name: "Gilles Buchheit", url: "https://gillesbuchheit.dev" }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
+  metadataBase: new URL("https://gillesbuchheit.dev"),
   openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://gillesbuchheit.dev",
     title: "Gilles Buchheit | Développeur web Fullstack React | Java",
     description: "Gilles Buchheit | Développeur web Fullstack React | Java",
-    url: "https://gillesbuchheit.dev",
+    siteName: "Gilles Buchheit Portfolio",
+    images: [
+      {
+        url: "/portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Gilles Buchheit - Développeur web Fullstack",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gilles Buchheit | Développeur web Fullstack React | Java",
+    description: "Gilles Buchheit | Développeur web Fullstack React | Java",
+    images: ["/portfolio.png"],
   },
 };
 
@@ -32,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         <link
           rel="apple-touch-icon"
