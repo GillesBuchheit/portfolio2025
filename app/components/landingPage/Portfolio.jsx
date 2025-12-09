@@ -5,14 +5,21 @@ import DownloadCV from "./DownloadCv";
 export default function Portfolio() {
   const projects = [
     {
-      title: "Portfolio personnel",
+      title: "WordScam",
       description:
-        "Mon portfolio personnel avec tous mes projets et mes compétences.",
-      image: "/portfolio.png",
-      image_width: 1901,
-      image_height: 950,
-      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
-      link: "https://gillesbuchheit.dev",
+        "Jeu en ligne multijoueur où les participants doivent inventer la définition d'un mot compliqué et voter pour la meilleure définition.",
+      image: "/word_scam.png",
+      image_width: 1420,
+      image_height: 931,
+      tags: [
+        "React",
+        "Tailwind CSS",
+        "TypeScript",
+        "Spring Boot",
+        "Java",
+        "PostgreSQL",
+      ],
+      link: "https://wordscam.app",
     },
     {
       title: "CourtClub (en cours)",
@@ -23,6 +30,16 @@ export default function Portfolio() {
       image_height: 744,
       tags: ["React", "Redux", "Python", "fastAPI", "PostgreSQL"],
       link: "https://superleague-frontend.onrender.com/",
+    },
+    {
+      title: "Portfolio personnel",
+      description:
+        "Mon portfolio personnel avec tous mes projets et mes compétences.",
+      image: "/portfolio.png",
+      image_width: 1901,
+      image_height: 950,
+      tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+      link: "https://gillesbuchheit.dev",
     },
     {
       title: "Site web Dr. Blanke Marine",
